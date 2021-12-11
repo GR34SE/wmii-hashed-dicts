@@ -15,8 +15,8 @@ class Empty:
 
 class OpenAddressingHashTable:
     DEFAULT_DICT_SIZE = 10
-    MAX_LOAD_FACTOR = 2 / 3
-    MIN_LOAD_FACTOR = 1 / 3
+    MAX_LOAD_FACTOR = 0.66
+    MIN_LOAD_FACTOR = 0.33
 
     def __init__(self):
         self.dict = [Empty] * self.DEFAULT_DICT_SIZE
