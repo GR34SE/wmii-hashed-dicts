@@ -25,6 +25,7 @@ class OpenAddressingHashTable:
         self.deleted_amount = 0
 
     def _resize_dict(self):
+        print "resize dict"
         current_dict = self.dict
         current_dict_size = self.inserted_amount
 
@@ -34,7 +35,7 @@ class OpenAddressingHashTable:
         self.deleted_amount = 0
 
         for entry in current_dict:
-            if entry is Entry:
+            if entry is not Empty and entry is not Deleted:
                 self.insert(entry.key, entry.value)
 
     def _get_entry_and_index(self, key):
@@ -67,6 +68,7 @@ class OpenAddressingHashTable:
         entry, _ = self._get_entry_and_index(key)
 
         if entry is Empty:
+            print "entry is none", entry
             return None
         else:
             return entry.value
