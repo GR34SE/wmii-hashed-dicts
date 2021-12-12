@@ -20,7 +20,7 @@ class OpenAddressingHashTable:
 
     def __init__(self):
         self.dict = [Empty] * self.DEFAULT_DICT_SIZE
-        self.dict_size = len(self.dict)  # reset on each resize
+        self.dict_size = len(self.dict)
         self.inserted_amount = 0
         self.deleted_amount = 0
 
